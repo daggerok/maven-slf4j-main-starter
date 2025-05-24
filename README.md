@@ -1,5 +1,5 @@
 # maven-slf4j-main-starter [![ci](https://github.com/daggerok/maven-slf4j-main-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/daggerok/maven-slf4j-main-starter/actions/workflows/ci.yml)
-Maven application project starter, maven wrapper, slf4j and assertj using java 24 (tested on Zulu and GraalVM)
+Maven application project starter using maven wrapper, slf4j, assertj and java 24 (tested on Zulu and GraalVM)
 
 ## Getting Started
 
@@ -49,5 +49,6 @@ function use() {
 ## Test Build Run
 
 ```bash
-use zulu 24 ; ./mvnw clean ; ./mvnw ; java -jar target/*.jar
+use zulu 24 ; java -version
+./mvnw clean ; ./mvnw ; java -jar target/*.jar
 ```
