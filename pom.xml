@@ -11,17 +11,17 @@
     <lib-directory>lib</lib-directory>
     <logback-test.xml>src/test/resources/logback-test.xml</logback-test.xml>
     <!---->
-    <java.version>23</java.version>
-    <lombok.version>1.18.36</lombok.version>
-    <logback.version>1.5.17</logback.version>
+    <java.version>24</java.version>
+    <lombok.version>1.18.38</lombok.version>
+    <logback.version>1.5.18</logback.version>
     <assertj.version>3.27.3</assertj.version>
-    <junit-jupiter.version>5.12.1</junit-jupiter.version>
+    <junit-jupiter.version>5.12.2</junit-jupiter.version>
     <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
-    <spring-boot-test.version>3.4.3</spring-boot-test.version>
+    <spring-boot-test.version>3.5.0</spring-boot-test.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven-surefire-plugin.version>3.5.2</maven-surefire-plugin.version>
+    <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
     <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
     <maven-dependency-plugin.version>3.8.1</maven-dependency-plugin.version>
   </properties>
