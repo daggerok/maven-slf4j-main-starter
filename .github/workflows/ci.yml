@@ -32,7 +32,7 @@ jobs:
         with:
           java-version: ${{ env.JAVA_VERSION }}
           distribution: ${{ env.JAVA_GRAALVM_DISTRIBUTION }}
-      - run: ./mvnw clean ; ./mvnw
+      - run: ./mvnw clean --no-transfer-progress ; ./mvnw --no-transfer-progress
       - run: java -jar target/*.jar
   zulu-24-tests:
     if: github.event.inputs.trigger == ''
@@ -52,7 +52,7 @@ jobs:
         with:
           java-version: ${{ env.JAVA_VERSION }}
           distribution: ${{ env.JAVA_ZULU_DISTRIBUTION }}
-      - run: ./mvnw clean ; ./mvnw
+      - run: ./mvnw clean --no-transfer-progress ; ./mvnw --no-transfer-progress
       - run: java -jar target/*.jar
   mvn-versions-display-updates:
     if: github.event.inputs.trigger == ''
@@ -72,6 +72,6 @@ jobs:
         with:
           java-version: ${{ env.JAVA_VERSION }}
           distribution: ${{ env.JAVA_ZULU_DISTRIBUTION }}
-      - run: ./mvnw versions:display-plugin-updates -Dmaven.version.ignore=".*(alpha|beta|rc|milestone|M\d+|RC\d+).*"
-      - run: ./mvnw versions:display-parent-updates -Dmaven.version.ignore=".*(alpha|beta|rc|milestone|M\d+|RC\d+).*"
-      - run: ./mvnw versions:display-property-updates -Dmaven.version.ignore=".*(alpha|beta|rc|milestone|M\d+|RC\d+).*"
+      - run: ./mvnw versions:display-plugin-updates -Dmaven.version.ignore=".*(alpha|beta|rc|milestone|M\d+|RC\d+).*" --no-transfer-progress
+      - run: ./mvnw versions:display-parent-updates -Dmaven.version.ignore=".*(alpha|beta|rc|milestone|M\d+|RC\d+).*" --no-transfer-progress
+      - run: ./mvnw versions:display-property-updates -Dmaven.version.ignore=".*(alpha|beta|rc|milestone|M\d+|RC\d+).*" --no-transfer-progress
